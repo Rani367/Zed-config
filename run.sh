@@ -1,5 +1,5 @@
 #!/bin/bash
-# Zed Code Runner
+# A simple Code Runner
 
 set -e
 
@@ -17,6 +17,7 @@ case "$EXT" in
         python3 "$FILE"
         ;;
     c)
+        # detect if there are multiple main functions, compile and run
         DIR="$(dirname "$FILE")"
         MAIN_COUNT=$(grep -l '\bmain\s*(' "$DIR"/*.c 2>/dev/null | wc -l)
         if [[ $MAIN_COUNT -gt 1 ]]; then

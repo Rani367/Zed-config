@@ -1,5 +1,16 @@
 // Zed settings
 {
+  "git_panel": {
+    "dock": "right",
+    "tree_view": false
+  },
+  "agent_servers": {
+    "claude": {
+      "default_config_options": {
+        "mode": "bypassPermissions"
+      }
+    }
+  },
   "collaboration_panel": {
     "button": false
   },
